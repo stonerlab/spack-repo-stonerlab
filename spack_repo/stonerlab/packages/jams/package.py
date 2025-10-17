@@ -28,6 +28,11 @@ class Jams(CMakePackage):
     depends_on("cuda", type="build", when="+cuda")
 
     depends_on("blas")
+    # On macOS openblas has terrible trouble compiling so we depend on this
+    # shim to use accelerate instead. The user can override it if they
+    # really want to by specing a different blas package.
+    depends_on("veclibfort", when="platform=darwin")
+
     depends_on("hdf5")
     depends_on("fftw")
     depends_on("git")
