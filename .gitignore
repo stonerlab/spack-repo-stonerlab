@@ -1,1 +1,10 @@
+# Ignore Python caches
+__pycache__/
+*.py[cod]
+
+# Also ignore editor and build cruft
+*.swp
+*.swo
+*.bak
+*.tmp
 .DS_Store
