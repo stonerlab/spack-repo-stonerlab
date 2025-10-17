@@ -12,14 +12,13 @@ class Jams(CMakePackage):
 
     homepage = "https://github.com/stonerlab/jams"
     git = "https://github.com/stonerlab/jams.git"
-    url = "https://github.com/stonerlab/jams/archive/refs/tags/v2.21.0.tar.gz"
     
     maintainers("drjbarker")
 
     license("MIT", checked_by="drjbarker")
 
     version("master", branch="master")
-    version("2.21.0", sha256="7c9a41381be6a03e6c642a96e85f761f41a2790f7e5d3e6d2876bdccc1cb6c0f")
+    version("2.22.0", tag="v2.22.0", commit="e834b2242ce0f69ee9a5c5c2eefa815857d54e68")
 
     variant("cuda", default=False, description="Enable CUDA support")
 
